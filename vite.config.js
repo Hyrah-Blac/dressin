@@ -15,8 +15,5 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    rollupOptions: {
-      input: './src/main.jsx', // ✅ Ensure it points to src/main.jsx
-    },
   },
 });
