@@ -15,5 +15,9 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      // Use index.html as the entry point, not main.jsx
+      input: 'index.html',
+    },
   },
 });
