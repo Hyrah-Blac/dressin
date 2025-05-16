@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Styles */
+:root {
+  --primary-color: #646cff;
+  --secondary-color: #535bf2;
+  --background-color: #242424;
+  --light-background: #ffffff;
+  --dark-background: #1a1a1a;
+  --hover-background: #2a2a2a;
+  --text-color-light: rgba(255, 255, 255, 0.87);
+  --text-color-dark: #213547;
+
+  font-family: "Avenir", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+/* Global Anchor Links */
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Global Body Styles */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+  overflow-x: hidden;
+}
+
+/* Header and Main - Full width with Responsive Padding */
+header,
+main {
+  width: 100%;
+  max-width: 1440px; /* Max container width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1,
+h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+/* Button Styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--dark-background);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+button:hover {
+  border-color: var(--primary-color);
+  background-color: var(--hover-background);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Responsive Grid Layout for Product Display */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: var(--light-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  header,
+  main {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    max-width: 220px;
+    font-size: 0.9rem;
+  }
+
+  header,
+  main {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  button {
+    width: auto;
+    max-width: 250px;
+    font-size: 1rem;
+  }
+
+  header,
+  main {
+    padding: 0 2rem;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color-dark);
+    background-color: var(--light-background);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+
+  button:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--text-color-light);
+    background-color: var(--background-color);
+  }
+
+  a:hover {
+    color: var(--secondary-color);
+  }
+
+  button {
+    background-color: var(--dark-background);
+  }
+}

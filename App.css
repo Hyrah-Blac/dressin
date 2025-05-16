@@ -1,0 +1,10 @@
+/* src/App.css */
+.main-content {
+  margin-top: 60px; /* To avoid overlap with the Navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}

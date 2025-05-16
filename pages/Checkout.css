@@ -1,0 +1,93 @@
+.checkout-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+/* Order Summary */
+.order-summary {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.checkout-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.remove-btn {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.remove-btn:hover {
+  background-color: #e63946;
+}
+
+/* Mpesa Instructions */
+.mpesa-instructions {
+  background-color: #e8f4ff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+/* Grand Total & Place Order */
+.place-order-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.1em;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.place-order-btn:hover {
+  background-color: #218838;
+}
